@@ -1,0 +1,31 @@
+
+#spring:
+#  jpa:
+#    show-sql: true
+#    generate-ddl: true
+#    hibernate:
+#      ddl-auto: create
+#  datasource:
+##        driver-class-name: org.h2.Driver
+#    username: root
+#    url: jdbc:mysql://localhost:3306/loanmanagement
+#    password: root
+
+
+#  http://localhost:8080/h2-console/
+
+spring:
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:loanmanagement
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+

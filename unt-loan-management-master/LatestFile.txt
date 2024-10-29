@@ -1,0 +1,71 @@
+1. In DropDown -- Change Home loan - > personal loan
+
+2. IN '/appyLoan' api add these fields:
+  coSignerName;
+  coSignerIncome;
+  coSignerRelation;
+  coSignerPhoneNumber;
+
+New API:
+
+3.unt/user/withdraw/sendToOfficer
+
+Payload:
+{
+    "loanId":1,
+    "withdrawLoanAmount":10000,
+    "routingNumber":8171,
+    "accountNumber":1562728
+}
+
+4.unt/loan/withdraw/approveOrReject
+ {
+    "loanId":1,
+    "status":"CREDITED"
+}
+
+
+5.Login Screen :
+Email is required  -> Username
+Button COntinue - > Login
+Bellow the button (Forgot the password button)
+
+
+
+
+6.Registration page :
+Name is required (Username)
+Continue -> Register
+When we click on Register ( Form should be clear)
+Bellow the Register button(Already have an account?  Log in)
+
+
+7.Account Profile Screen:
+Update the LoginUser users data 
+Remove girl Avatar
+Remove save details button
+
+8.DashBoard Screen :
+Remove Dashboard screen,
+
+9.Apply Loan Form :
+Button Save details -> Apply  loan
+When we complete apply for loan form should be clear and popup close automatically
+
+After clicking send to financial officer button response should be Successfully sent to officer
+
+After login as as admin:
+Remove static cards and make chart big one change it to dinamicly
+
+Officer Section - Search for loan type placeholder change to  Search for officer
+
+10.Create Officer Form :
+change Name to Create new officer
+Change Save Officer to Create new Officer
+After creating new officer - form should be clear and close thye popup automatically.
+
+
+11.When Click on EYE Icon to open form:
+Detailed View Of Loan Application change it to Detailed View Of Loan Request.
+Change status of  Application operation is successfully! (Approve,Rejected)
+Form Should close automatically affter approving or reject

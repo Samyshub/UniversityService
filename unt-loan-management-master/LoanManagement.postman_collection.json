@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "9df0d813-e29b-4fa1-951a-2d5337b8c9d9",
+		"name": "LoanManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31246877"
+	},
+	"item": [
+		{
+			"name": "user/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"demo1\",\r\n    \"emailId\":\"demo1@gmail.com\",\r\n    \"password\":\"demo1\",\r\n    \"roleId\":2,\r\n    \"designationId\":2,\r\n    \"firstName\":\"demo1\",\r\n    \"lastName\":\"demo1\",\r\n    \"phoneNumber\":12452189\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/user/save",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"demo1\",\r\n    \"password\":\"demo1\"\r\n  \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/user/login",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unt/admin/save/officer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"officer\",\r\n    \"emailId\":\"officer@gmail.com\",\r\n    \"password\":\"officer\",\r\n    \"roleId\":3,\r\n    \"designationId\":3,\r\n    \"firstName\":\"venkta\",\r\n    \"lastName\":\"krishna\",\r\n    \"phoneNumber\":12345678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/admin/save/officer",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"admin",
+						"save",
+						"officer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appalyLoan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"bankName\":\"SBI\",\r\n     \"loanType\":\"Education\",\r\n     \"rateOfInterest\":\"11\",\r\n     \"loanAmount\":100100,\r\n     \"userName\":\"demo1\",\r\n     \"years\":1,\r\n    \"coSignerName\":\"venky\",\r\n    \"coSignerIncome\":10000,\r\n    \"coSignerRelation\":\"Brother\",\r\n    \"coSignerPhoneNumber\":123456777\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/loan/applyLoan",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"loan",
+						"applyLoan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loan/getLoans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n     \"userName\":\"demo1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/loan/getLoans",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"loan",
+						"getLoans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/dashboard/getLoans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/unt/admin/dashboard/getLoans",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"admin",
+						"dashboard",
+						"getLoans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/getOfficers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/unt/admin/getOfficers",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"admin",
+						"getOfficers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/sendToOfficer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/unt/user/sendToOfficer/1",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"user",
+						"sendToOfficer",
+						"1"
+					],
+					"query": [
+						{
+							"key": "loanID",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loan/approveOrReject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanId\":1,\r\n    \"status\":\"APPROVED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/loan/approveOrReject",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"loan",
+						"approveOrReject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/delete/officer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/unt/admin/delete/officer/officer",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"admin",
+						"delete",
+						"officer",
+						"officer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unt/user/withdraw/sendToOfficer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanId\":1,\r\n    \"withdrawLoanAmount\":10000,\r\n    \"routingNumber\":8171,\r\n    \"accountNumber\":1562728\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/user/withdraw/sendToOfficer",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"user",
+						"withdraw",
+						"sendToOfficer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/unt/loan/withdraw/approveOrReject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanId\":1,\r\n    \"status\":\"CREDITED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/unt/loan/withdraw/approveOrReject",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"unt",
+						"loan",
+						"withdraw",
+						"approveOrReject"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
